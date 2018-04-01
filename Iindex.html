@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ceasar cipher</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+	function rot13(str) { 
+	  var answer = "";
+	  
+	  for(i=0; i<str.length;i++){
+	    
+		  var number = str.charCodeAt(i);
+		  var rot13number = number+13;
+		    
+		    var newNumber;
+		    if(rot13number > 90){
+		      newNumber= rot13number%90 + 64
+		    }
+		    else {
+		      newNumber = rot13number
+		    }
+		   answer += String.fromCharCode(newNumber);
+		  }
+	return answer.replace(/-/g," ");
+	}
+	
+	console.log(rot13("SERR PBQR PNZC"));
+
+
+	</script>
+
+
+</body>
+</html>
